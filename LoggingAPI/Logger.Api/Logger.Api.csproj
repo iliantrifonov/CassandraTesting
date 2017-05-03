@@ -77,6 +77,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\LogController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -93,7 +96,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logger.Data.Service\Logger.Data.Service.csproj">
+      <Project>{5d98a847-fb5b-4686-a26e-5963458f0f82}</Project>
+      <Name>Logger.Data.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logger.Models\Logger.Models.csproj">
+      <Project>{ef23b0b6-25ea-4b23-81c0-37df102f10fa}</Project>
+      <Name>Logger.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
